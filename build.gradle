@@ -55,6 +55,6 @@ jar {
  
  
 springBoot {
-  mainClass = "com.nisum.kodea.application.Application"
+  mainClass = "com.kodea.tdd.application.Application"
 }
 

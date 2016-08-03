@@ -34,40 +34,51 @@ public class CalcTest {
 	}
 	
 	@Test
-	public void checkRestarTwoIntegers(){
+	public void checkSubtractTwoIntegers(){
 		Calc calc;
 		calc=new Calc();
 		int val1=10;
 		int val2=6;
 		
-		double result=calc.restar(val1,val2);
+		double result=calc.subtract(val1,val2);
 		
 		assertEquals(4,result,0.1);
 		
 	}
 	
 	@Test
-	public void checkMultiplicarTwoIntegers(){
+	public void checkMultiplyTwoIntegers(){
 		Calc calc;
 		calc=new Calc();
 		int val1=5;
 		int val2=6;
 		
-		double result=calc.multiplicar(val1,val2);
+		double result=calc.multiply(val1,val2);
 		
 		assertEquals(30,result,0.1);
 	}
 	
 	@Test
-	public void checkDividirTwoIntegers(){
+	public void checkDivideTwoIntegers(){
 		Calc calc;
 		calc=new Calc();
 		int val1=10;
 		int val2=2;
 		
-		double result=calc.dividir(val1,val2);
+		double result=calc.divide(val1,val2);
 		
 		assertEquals(5,result,0.1);
+	}
+	
+	@Test (expected = ArithmeticException.class)
+	public void checkDivideByZero(){
+		
+		Calc calc;
+		calc=new Calc();
+		int val1=10;
+		int val2=0;
+		
+		calc.divide(val1, val2);
 	}
 	
 	
